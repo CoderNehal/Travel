@@ -167,7 +167,7 @@ const Navbar = () => {
 											delay: 1.5,
 											transition: { duration: 0.5, ease: 'easeInOut' },
 										}}
-										className='border-black text-5xl'
+										className='border-black text-5xl whitespace-nowrap'
 										onClick={() => setSidebar(false)}>
 										<NavLink
 											style={({ isActive }) =>

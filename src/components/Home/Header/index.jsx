@@ -45,7 +45,7 @@ const Header = () => {
 						opacity: 1,
 						transition: { ease: 'easeInOut', duration: 1, delay: 1 },
 					}}
-					className='subtitle text-center mr-8 md:text-left lg:pl-4 rounded-2xl py-2  border border-yellow-200  bg-gray-400 backdrop-blur-xl shadow-lg text-white   text-2xl md:text-3xl'>
+					className='subtitle text-center mr-16 md:text-left lg:pl-4 rounded-2xl py-2  border border-yellow-200  bg-gray-400 backdrop-blur-xl shadow-lg text-white   text-2xl md:text-3xl'>
 					Choose where to roam
 				</motion.div>
 			</motion.div>
