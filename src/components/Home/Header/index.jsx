@@ -8,9 +8,7 @@ const container = {
 	},
 };
 const Header = () => {
-	useEffect(() => {
-		console.log('Console log bulaya');
-	}, []);
+	
 
 	return (
 		<div className=' bg-nature   flex justify-between px-12 md:px-24 w-screen '>

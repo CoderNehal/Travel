@@ -7,7 +7,7 @@ const Navbar = () => {
 		borderBottom: '2px solid red',
 	};
 	return (
-		<div className='fixed overflow-x-hidden   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 '>
+		<div className='fixed overflow-x-hidden z-50   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 '>
 			Travels
 			<ul className='flex justify-between items-baseline '>
 				<li id='home' className='border-black mx-4 lg:mx-6 text-base'>

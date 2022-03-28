@@ -9,7 +9,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="App">
+    <div className="App ">
       <AnimatePresence presenceAffectsLayout>
 
         <Navbar />
