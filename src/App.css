@@ -2,6 +2,9 @@
 	display: none;
 }
 
+.App {
+	overflow-x: hidden;
+}
 /* Hide scrollbar for IE, Edge and Firefox */
 .App {
 	-ms-overflow-style: none; /* IE and Edge */
