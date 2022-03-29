@@ -4,7 +4,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-     
+      height: {
+        '150': '150%',
+        '48rem': '48rem',
+        '28rem': '28rem',
+      },
       fontSize: {
         '7xl': '6rem',
         '8xl': '7rem',
