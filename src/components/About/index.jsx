@@ -28,7 +28,7 @@ const About = () => {
 							transition: { ease: 'easeInOut', duration: 1 },
 						}}
 						className='md:-mb-8  drop-shadow-lg shadow-black text-7xl md:text-8xl'>
-						tera
+						Little
 					</motion.p>
 
 					<motion.p
@@ -39,7 +39,7 @@ const About = () => {
 							transition: { ease: 'easeInOut', duration: 1, delay: 0.5 },
 						}}
 						className='drop-shadow-lg shadow-black text-7xl md:text-8xl'>
-						Mukaam gamale
+						Do you Know
 					</motion.p>
 				</div>
 				<motion.div
