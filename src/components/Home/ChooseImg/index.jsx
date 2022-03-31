@@ -10,12 +10,11 @@ const Box = () => {
 	});
 	const animation = useAnimation();
 	useEffect(() => {
-	
 		if (inView) {
 			animation.start({
 				opacity: 1,
 				transition: {
-					duration: 0.5,
+					duration: 0.75,
 					ease: 'easeInOut',
 				},
 			});
@@ -24,7 +23,7 @@ const Box = () => {
 			animation.stop({
 				opacity: 0,
 				transition: {
-					duration: 0.5,
+					duration: 0.75,
 					ease: 'easeInOut',
 				},
 			});

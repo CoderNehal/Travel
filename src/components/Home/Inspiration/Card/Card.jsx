@@ -13,12 +13,10 @@ const Card = ({ item }) => {
 	useEffect(() => {
 		if (inView) {
 			animation.start({
-				y: 0,
-				scale: 1,
-				opacity: 1,
+				x: 0,
 				transition: {
-					scale: { duration: 0.5, ease: 'easeInOut' },
-					opacity: { duration: 0.5, ease: 'easeInOut' },
+					x: { duration: 0.75, ease: 'easeInOut' },
+					type: 'tween',
 				},
 			});
 		}
@@ -31,7 +29,7 @@ const Card = ({ item }) => {
 
 	return (
 		<motion.div
-			initial={{ y: '5rem', scale: 0.5, opacity: 0.5 }}
+			initial={{ x: item.id % 2 == 0 ? '100%' : '-100%' }}
 			animate={animation}
 			ref={ref}
 			style={style}
