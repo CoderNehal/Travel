@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import { ContextAPI } from './utils/Context/ContextAPI';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -13,7 +14,6 @@ function App() {
 
   return (
     <ContextAPI>
-
       <div className="App ">
         <AnimatePresence presenceAffectsLayout>
           <Navbar />
@@ -21,6 +21,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
           </Routes>
+          <Footer />
         </AnimatePresence>
 
       </div>
