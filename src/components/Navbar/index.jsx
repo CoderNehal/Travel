@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import ham from '../../assets/images/ham.png';
+import ham1 from '../../assets/images/darkHam1.png';
 import cancel from '../../assets/images/cancel.png';
 import '../../assets/css/Navbar/Navbar.scss';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Travelcontext } from '../../utils/Context/ContextAPI';
+import { useInView } from 'react-intersection-observer';
+
 const Navbar = () => {
 	const [Sidebar, setSidebar] = useState(false);
+	const [offset, setOffset] = useState(0);
+	const [flag] = useContext(Travelcontext);
+	useEffect(() => {
+	}, [flag]);
+
 	const activeStyle = {
 		borderBottom: '2px solid red',
 	};
@@ -35,7 +44,7 @@ const Navbar = () => {
 							},
 						}}
 						style={{ height: '100vh' }}
-						className='fixed z-50   top-0 left-0 w-full  Navbar overflow-hidden p-20 py-30 '>
+						className='fixed z-50   top-0 left-0 w-full  Navbar  overflow-hidden p-20 py-30 '>
 						<div className='content   h-full w-full flex flex-col justify-evenly items-center'>
 							{Sidebar && (
 								<motion.div
@@ -180,16 +189,22 @@ const Navbar = () => {
 								</>
 							)}
 						</div>
-						{/* <button onClick={() => setSidebar(!Sidebar)}>Click me</button> */}
 					</motion.div>
 				)}
 			</AnimatePresence>
-			<div className=' fixed overflow-x-hidden z-40   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 '>
+			<div
+				className={`fixed overflow-x-hidden z-40   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 ${
+					flag ? 'text-white bg-black glass' : 'text-black '
+				}`}>
 				Travels
 				<div
 					className='hamburger cursor-pointer lg:hidden '
 					onClick={() => setSidebar(!Sidebar)}>
-					<img className='h-6 w-6' src={ham} alt='' />
+					{flag ? (
+						<img className='h-6 w-6' src={ham1} alt='' />
+					) : (
+						<img className='h-6 w-6' src={ham} alt='' />
+					)}
 				</div>
 				<ul className=' hidden lg:flex justify-between items-baseline '>
 					<li id='home' className='border-black mx-4 lg:mx-6 text-base'>
