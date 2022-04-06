@@ -13,7 +13,7 @@ const container = {
 
 const About = () => {
 	return (
-		<div className=' bg-nature   flex justify-between px-12 md:px-24 w-screen '>
+		<div className=' bg-nature-about   flex justify-between px-12 md:px-24 w-screen '>
 			<motion.div
 				initial='hidden'
 				animate='visible'
