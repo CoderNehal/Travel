@@ -1,15 +1,15 @@
-import React, { useContext, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import tent from '../../../assets/images/tent.jpg';
 import '../../../assets/css/Home/ChooseImg.scss';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Travelcontext } from '../../../utils/Context/ContextAPI';
+
 
 const Box = () => {
 	const { ref, inView } = useInView({
 		threshold: 0,
 	});
-	const [flag, setflag] = useContext(Travelcontext);
+
 	const animation = useAnimation();
 	useEffect(() => {
 		if (inView) {

@@ -1,9 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { FooterLinks } from '../../data/FooterLinks';
 import '../../assets/css/Footer/Footer.scss';
+import { useInView } from 'react-intersection-observer';
+import { Travelcontext } from '../../utils/Context/ContextAPI';
 const Footer = () => {
+	const { ref, inView } = useInView({
+		threshold: 0,
+	});
+
+	const [flag, setflag] = useContext(Travelcontext);
+	useEffect(() => {
+		console.log(inView);
+		if (inView) setflag(true);
+		console.log('Footer ka inview', inView);
+	}, [inView]);
 	return (
-		<div className='bg-black w-screen lg:px-28 lg:py-12  text-white border-t-2 border-gray-400 '>
+		<div
+			ref={ref}
+			className='bg-black w-screen lg:px-28 lg:py-12  text-white border-t-2 border-gray-400 '>
 			<footer className='footer-1 pb-8 pt-4 sm:py-10 '>
 				<div className='mx-auto px-4'>
 					<div className='sm:flex  sm:flex-wrap  md:py-4'>

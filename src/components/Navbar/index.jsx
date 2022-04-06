@@ -6,7 +6,7 @@ import cancel from '../../assets/images/cancel.png';
 import '../../assets/css/Navbar/Navbar.scss';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Travelcontext } from '../../utils/Context/ContextAPI';
-import { useInView } from 'react-intersection-observer';
+
 
 const Navbar = () => {
 	const [Sidebar, setSidebar] = useState(false);
@@ -193,7 +193,7 @@ const Navbar = () => {
 				)}
 			</AnimatePresence>
 			<div
-				className={`fixed overflow-x-hidden z-40   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 ${
+				className={`fixed  overflow-x-hidden z-40   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 ${
 					flag ? 'text-white bg-black glass' : 'text-black '
 				}`}>
 				Travels
