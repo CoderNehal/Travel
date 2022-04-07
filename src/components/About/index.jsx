@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import '../../assets/css/About/About.scss';
 import AboutText from './AboutText/AboutText';
@@ -6,6 +6,10 @@ import AboutText from './AboutText/AboutText';
 import family from '../../assets/images/people.jpg';
 import Founder from './Founder';
 const About = () => {
+	// useEffect(() => {
+	// 	window.scrollTo(0, 0);
+	// }, []);
+
 	return (
 		<>
 			<img

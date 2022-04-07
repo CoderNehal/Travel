@@ -6,6 +6,10 @@ import Inspiration from './Inspiration';
 import Box from './ChooseImg';
 import Global from './Global';
 const Home = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<div className=''>
 			<Header />

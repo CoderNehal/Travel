@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { Travelcontext } from '../../../utils/Context/ContextAPI';
 
 const AboutText = () => {
+	const [flag, setflag] = useContext(Travelcontext);
+
+	const [ref, inView] = useInView({
+		threshold: 0,
+	});
+	useEffect(() => {
+		if (inView) setflag(false);
+	}, [inView]);
+ const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025
+      }
+    }
+  };
+
 	return (
-		<div className='lg:h-96 px-10 lg:px-80 py-10 lg:py-20 flex flex-col justify-center items-center'>
+		<div
+			ref={ref}
+			className='lg:h-96 px-10 lg:px-80 py-10 lg:py-20 flex flex-col justify-center items-center'>
 			<div className='lg:px-20 xl:px-32 tracking-wide '>
 				<h2 className='text-3xl '>About us</h2>
 				<p className=' text-lg text-gray-700 pt-3 '>
