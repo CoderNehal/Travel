@@ -47,7 +47,7 @@ const Card = ({ item }) => {
 						{item.location}
 					</div>
 					<p className='text-gray-700 text-lg md:text-base overflow-hidden'>
-						Location : {item.description}
+						Location : {item.address}
 					</p>
 				</div>
 				<div className=' absolute bottom-0 px-6 pt-4 pb-2 w-full border-t-2 border-gray-100 '>

@@ -6,6 +6,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import { ContextAPI } from './utils/Context/ContextAPI';
 import Footer from './components/Footer/Footer';
+import Gallery from './components/Gallery';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Routes location={location}>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
+            <Route path='/gallery' element={<Gallery />} />
           </Routes>
           <Footer />
         </AnimatePresence>

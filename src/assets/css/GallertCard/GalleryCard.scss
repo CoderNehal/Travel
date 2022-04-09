@@ -1,0 +1,23 @@
+// .gallery-card {
+
+//     width: 25.5rem;
+// }
+.inner-card {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    .overlay{
+        display: none;
+        background-color: rgba(0,0,0,0.3);
+        
+    }
+    .gallery-tag{
+        box-shadow: 0px -19px 44px -12px rgba(0,0,0,0.3) ; 
+	 -webkit-box-shadow: 0px -19px 44px -12px rgba(0,0,0,0.3) ; 
+	 -moz-box-shadow: 0px -19px 44px -12px rgba(0,0,0,0.3) ;
+    }
+}
+
+
+.inner-card:hover > .overlay{
+    display: flex;
+    
+}
