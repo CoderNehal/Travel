@@ -34,7 +34,6 @@ const Founder = () => {
 	const [flag, setflag] = useContext(Travelcontext);
 	const [startAnimation, setstartAnimation] = useState(false);
 	useEffect(() => {
-		console.log(inView);
 		if (inView) {
 			setflag(true);
 			setstartAnimation(true);

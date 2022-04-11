@@ -10,117 +10,100 @@ import turkey from '../assets/images/turkey.jpg'
 
 export const inspirationData = [
     {
+        id: 1,
         location: 'Gateway of India',
         address: ' Apollo Bandar, Colaba, Mumbai',
-        Description: ' Apollo Bandar, Colaba, Mumbai',
+        Description: ' Summer, winter, spring or monsoon, the Gateway of India is one of the favorite hangout spots for Mumbaikars. It also counts among the top tourist attractions in Mumbai and is frequented by travelers all year long. With a history of over 100 years, the colossal monument stands overlooking the majestic Arabian Sea, making it a sight to behold. Needless to say, your trip to Mumbai cannot be deemed complete without a visit to the Gateway of India.',
         img: img1,
         tags: ["Bombay", "Juhu", "Style"],
         city: "Mumbai",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        price: [1000, 2000],
         discount: 30
     }, {
+        id: 2,
         location: 'Manali',
         address: ' Kullu, Himachal Pradesh',
-        Description: ' Kullu, Himachal Pradesh',
+        Description: ' Manali is located in India’s northern State Himachal Pradesh. Manali is a most beautiful destination in India. It is located on the banks of the Beas River. It is a most beautiful hill station. Here you can enjoy many adventure activities. You can enjoy trekking, climbing, mountain biking, Paragliding, and skiing. There are many places to explore on this beautiful station. Manali attracts tourist from all over the world.',
         img: img2,
         tags: ["Manali", "Cold", "Kullu"],
         city: "Manali",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        price: [1000, 2000],
         discount: 30
     }, {
+        id: 3,
         location: 'Jim Corbett National Park',
         address: 'Nianital, Uttarakhand',
-        Description: 'Nianital, Uttarakhand',
+        Description: "One of India's best known and oldest wildlife sanctuaries, the Jim Corbett National Park, a part of the larger Corbett Tiger Reserve, a Project Tiger Reserve lies along the Ramganga River at the foot of the Kumaon Hills. It is named after Jim Corbett, the famous naturalist and the legendary hunter of the man-eaters of Kumaon. The main areas for tourists are the Dhikala Tourism Zone (entry through Dhangarhi Gate) and the Bijrani Tourism Zone (entry through the Amdanda Gate). The magical landscape of Corbett is well known and fabled for its tiger richness.",
         img: img4,
         tags: ["Wild", "Tiger", "Photography"],
         city: "Uttarakhand",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        price: [1000, 2000],
         discount: 30
     },
     {
+        id: 4,
         location: 'Jaipur',
         address: 'National Highway No.8 connecting Delhi and Mumbai,Rajasthan',
-        Description: 'National Highway No.8 connecting Delhi and Mumbai,Rajasthan',
+        Description: 'Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. ',
         img: img3,
         tags: ["Pinkcity", "Banna"],
-        city: "Jaipur   ",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        city: "Jaipur",
+        price: [1000, 2000],
         discount: 30
     },
     {
-        location: 'Hong Kong, Hong Kong',
+        id: 5,
+        location: 'Disney Land, Hong Kong',
         address: "Penny's Bay, Lantau Island, Hong Kong",
-        Description: "Penny's Bay, Lantau Island, Hong Kong",
+        Description: "As Euro Disneyland was being constructed, Michael Eisner stressed to the imagineers that this had to be the most beautiful park, and wow did they rise to the challenge. Anyone who’s had the pleasure to visit this resort surely has felt the charm oozing out of every corner, or found themselves captivated by the stunning sightlines and impeccable detail that Walt Disney Imagineering brought to this park.",
         img: img5,
         tags: ["DisneyLand", "Fun"],
-        city: "Disney land",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        city: "Disneyland",
+        price: [1000, 2000],
         discount: 30
     },
     {
-        location: 'Eiffel Tower, Paris,France',
-        address: 'Champ de Mars, 5 Av. Anatole France, 75007 Paris, France',
-        Description: 'Climb to the top of the Eiffel Tower, stroll down the Champs Elysées, visit the Louvre, see many shows and exhibitions, or simply wander along the banks of the Seine...read in French in the Tuileries garden, and quite simply take the time to experience the Parisian way of life!',
-        img: paris,
-        tags: ["paris", "tower"],
-        city: "Paris",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
-        discount: 30
-    }, {
+        id: 6,
         location: 'IHS towers,Dubai',
         address: "4, Trade Center Street, Dubai",
         Description: "Indulgent, glamorous, and progressive are words that describe Dubai. This United Arab Emirates city is a luxury travel destination for leisure and business travellers. Dubai combines a modern metropolis with a timeless sensibility and Arabian flair",
         img: dubai,
         tags: ["TwinTowers", "Rich"],
         city: "Dubai",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        price: [1000, 2000],
         discount: 30
     },
     {
+        id: 7,
+        location: 'Eiffel Tower, Paris,France',
+        address: 'Champ de Mars, 5 Av. Anatole France, 75007 Paris, France',
+        Description: 'Climb to the top of the Eiffel Tower, stroll down the Champs Elysées, visit the Louvre, see many shows and exhibitions, or simply wander along the banks of the Seine...read in French in the Tuileries garden, and quite simply take the time to experience the Parisian way of life!',
+        img: paris,
+        tags: ["paris", "tower"],
+        city: "Paris",
+        price: [1000, 2000],
+        discount: 30
+    },
+    {
+        id: 8,
         location: 'Sensō-ji temple ,Tokyo, Japan',
         address: "2 Chome-3-1 Asakusa, Taito City, Tokyo 111-0032, Japan",
         Description: "Japan is the most amazing tourist destination and it offers many unique experiences that you cannot find in any other part of the world. The culture of this country is an interesting blend of Eastern traditions and Western modernity that can be seen everywhere.",
         img: tokyo,
         tags: ["Sakura", "Peace"],
         city: "Japan",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        price: [1000, 2000],
         discount: 30
     },
     {
+        id: 9,
         location: 'Kaleici,Antalya,Turkey',
         address: "Kılınçarslan, Sakarya Sk. No:11, 07100 Muratpaşa/Antalya, Turkey",
         Description: "Its vibrant culture, famous food, and vast history wow all who venture here, while its glorious landscapes, from the sun-soaked Mediterranean to the mighty mountains and arid steppe, are tourist attractions in themselves.Turkey is a dazzling destination that straddles Asia and Europe.",
         img: turkey,
         tags: ["historic", "waterrfalls"],
         city: "Turkey",
-        price: {
-            normal: 1000,
-            premium: 2000
-        },
+        price: [1000, 2000],
         discount: 30
     },
 ]

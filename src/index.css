@@ -7,10 +7,18 @@ body {
 	margin: 0;
 	font-family: 'Oswald', sans-serif;
 }
+*,*:hover,*:focus{
+	outline: none;
+}
 html {
 	scroll-behavior: smooth;
+	
   }
-
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+  }
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;

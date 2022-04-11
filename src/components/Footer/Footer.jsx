@@ -10,9 +10,7 @@ const Footer = () => {
 
 	const [flag, setflag] = useContext(Travelcontext);
 	useEffect(() => {
-		console.log(inView);
 		if (inView) setflag(true);
-		console.log('Footer ka inview', inView);
 	}, [inView]);
 	return (
 		<div

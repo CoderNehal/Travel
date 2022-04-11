@@ -7,6 +7,8 @@ import { AnimatePresence } from 'framer-motion';
 import { ContextAPI } from './utils/Context/ContextAPI';
 import Footer from './components/Footer/Footer';
 import Gallery from './components/Gallery';
+import Location from './components/Location';
+import NotFound from './components/NotFound';
 
 
 
@@ -22,6 +24,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/gallery' element={<Gallery />} />
+            <Route path='/locations/:name' element={<Location />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer />
         </AnimatePresence>
