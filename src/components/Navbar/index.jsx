@@ -6,14 +6,12 @@ import cancel from '../../assets/images/cancel.png';
 import '../../assets/css/Navbar/Navbar.scss';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Travelcontext } from '../../utils/Context/ContextAPI';
-
-
+import Logo from '../../utils/svgviewer-png-output.png';
 const Navbar = () => {
 	const [Sidebar, setSidebar] = useState(false);
 	const [offset, setOffset] = useState(0);
 	const [flag] = useContext(Travelcontext);
-	useEffect(() => {
-	}, [flag]);
+	useEffect(() => {}, [flag]);
 
 	const activeStyle = {
 		borderBottom: '2px solid red',
@@ -196,7 +194,8 @@ const Navbar = () => {
 				className={`fixed  overflow-x-hidden z-40   Navbar w-screen  font-bold  h-10 text-xl  md:text-2xl flex justify-between items-center px-5 py-8 md:px-32 md:py-8 ${
 					flag ? 'text-white bg-black glass' : 'text-black '
 				}`}>
-				Travels
+				<img className=' h-16 md:h-20' src={Logo} alt='' />
+
 				<div
 					className='hamburger cursor-pointer lg:hidden '
 					onClick={() => setSidebar(!Sidebar)}>

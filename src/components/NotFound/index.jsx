@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	const navigate = useNavigate();
 	return (
 		<section class='bg-primary py-[120px] relative z-10'>
 			<div class='container'>
@@ -25,8 +30,8 @@ const NotFound = () => {
 							<p class='text-lg text-black mb-8'>
 								The page you are looking for it maybe deleted
 							</p>
-							<a
-								href='javascript:void(0)'
+							<button
+								onClick={(e) => navigate('/')}
 								class='
                       text-base
                       font-semibold
@@ -37,11 +42,11 @@ const NotFound = () => {
                       rounded-lg
                       px-8
                       py-3
-                      hover:bg-black hover:text-primary
+                      hover:bg-black hover:text-white
                       transition
                       '>
 								Go To Home
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>

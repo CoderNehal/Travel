@@ -1,19 +1,18 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import tent from '../../../assets/images/tent.jpg';
 import '../../../assets/css/Home/ChooseImg.scss';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import { useNavigate } from 'react-router-dom';
 
 const Box = () => {
 	const { ref, inView } = useInView({
 		threshold: 0,
 	});
-
+	const navigate = useNavigate();
 	const animation = useAnimation();
 	useEffect(() => {
 		if (inView) {
-			
 			animation.start({
 				opacity: 1,
 				transition: {
@@ -23,7 +22,6 @@ const Box = () => {
 			});
 		}
 		if (!inView) {
-			
 			animation.stop({
 				opacity: 0,
 				transition: {
@@ -50,7 +48,11 @@ const Box = () => {
 				<div className='title absolute text-2xl lg:text-6xl text-white bottom-28 lg:bottom-40 flex flex-col  items-center'>
 					<p> Let your curiosity do the booking</p>
 					<div className='bg-white text-black  text-lg lg:text-3xl mt-3 lg:mt-8 py-1 lg:py-3  px-4 lg:px-10 rounded-full'>
-						<button className='gallery-button '>Gallery</button>
+						<button
+							onClick={(e) => navigate('/gallery')}
+							className='gallery-button '>
+							Gallery
+						</button>
 					</div>
 				</div>
 			</motion.div>

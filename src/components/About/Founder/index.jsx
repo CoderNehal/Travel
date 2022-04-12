@@ -79,9 +79,9 @@ const Founder = () => {
 						animate={startAnimation ? FounderInfoAnimation : {}}
 						className=' pb-6 lg:pb-8 text-lg text-gray-300'>
 						Nehal Ugahde is the co-founder and Chief Executive Officer of
-						Travels and sets the vision and strategy for the company. In 2017,
-						Nehal and Lokesh Patil became Travel's first Hosts. Since then,
-						Nehal has overseen Travel's growth to become a community of over
+						Travlet's and sets the vision and strategy for the company. In 2017,
+						Nehal and Lokesh Patil became Travlet's first Hosts. Since then,
+						Nehal has overseen Travlet's growth to become a community of over
 						four million Hosts who have welcomed more than 1 billion guests
 						across 220+ countries and regions.
 					</motion.p>
@@ -90,7 +90,7 @@ const Founder = () => {
 						animate={startAnimation ? FounderInfoAnimation : {}}
 						className=' pb-6 lg:pb-8 text-lg text-gray-300'>
 						A graduate from the Walchand College of Engineering, Nehal has
-						embedded his creative roots in Travel's culture, product and
+						embedded his creative roots in Travlet's culture, product and
 						community. This design-driven approach has enabled a system of trust
 						that allows families to enjoy together, and created a unique
 						business model that facilitates connection and belonging.

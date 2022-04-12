@@ -7,7 +7,7 @@ const Gallery = () => {
 		window.scrollTo(0, 0);
 	}, []);
 	return (
-		<div className='mt-20 bg-slate-50 md:px-6  lg:px-28 my-20'>
+		<div className='mt-16 bg-slate-50 md:px-6  lg:px-28 pb-20'>
 			<h1 className='text-3xl px-4  tracking-wider py-6 lg:py-10 font-semibold'>
 				Gallery
 			</h1>
