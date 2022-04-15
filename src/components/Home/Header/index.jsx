@@ -18,7 +18,7 @@ const Header = () => {
 				animate='visible'
 				variants={container}
 				className='titles -mt-20 flex flex-col justify-center leading-tight md:leading-normal '>
-				<div className='hero-title text-violet-700  uppercase  flex flex-col items-center'>
+				<div className='hero-title text-pink-700  uppercase  flex flex-col items-center'>
 					<motion.p
 						initial={{ y: '60%', opacity: 0 }}
 						animate={{

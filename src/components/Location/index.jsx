@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 import { inspirationData } from '../../data/insipirationData';
 import FamilyMemberCard from './FamilyMemberCard';
 import { Travelcontext } from '../../utils/Context/ContextAPI';
 import { useInView } from 'react-intersection-observer';
+import Modal from '../Modal';
+import { AnimatePresence } from 'framer-motion';
 const Location = () => {
 	const location = useLocation();
 	const [CurrentCity, setCurrentCity] = useState({});
@@ -16,6 +17,9 @@ const Location = () => {
 	const [PeopleCounter, setPeopleCounter] = useState(1);
 	const [PCToShow, setPCToShow] = useState(1);
 	const [flag, setflag] = useContext(Travelcontext);
+	const [showModal, setshowModal] = useState(false);
+	const [names, setnames] = useState(Array(15).join('.').split('.'));
+
 	const { ref, inView } = useInView({
 		threshold: 0,
 	});
@@ -37,9 +41,14 @@ const Location = () => {
 			console.log('Ok');
 		}
 	}, [inView]);
-
+	const handleNames = (id, name) => {
+		const localNames = names;
+		localNames[id] = name;
+		setnames(localNames);
+		console.log(names);
+	};
 	return (
-		<div className='mt-16 bg-slate-50  px-4 xl:px-20 py-8 xl:py-12 text-xl '>
+		<div className='mt-16 bg-slate-50   px-4 xl:px-20 py-8 xl:py-12 text-xl '>
 			<div className='Location-name md:px-8  xl:px-12 text-black text-2xl md:text-3xl xl:text-4xl'>
 				{CurrentCity.location}
 			</div>
@@ -127,8 +136,8 @@ const Location = () => {
 							{CurrentCity.Description}
 						</span>
 					</div>
-					<div className='pb-2 flex flex-col items-start  '>
-						<p className=' border-b-2     '>
+					<div className='pb-2 relative flex flex-col items-start  '>
+						<p className=' border-b-2   '>
 							Pricing{' '}
 							<small className=' absolute ml-3 opacity-60'>(*per person)</small>
 						</p>
@@ -154,10 +163,10 @@ const Location = () => {
 				</div>
 			</div>
 			{showForm && (
-				<div className=' text-lg xl:text-2xl xl:px-12 '>
+				<div className=' text-lg xl:text-2xl xl:px-12 relative '>
 					<div className='form-header  flex flex-row-reverse md:flex-row justify-between py-6'>
 						<p className=''>Total Members: {PCToShow}</p>
-						<div className=''>
+						<div className='bg-slate-50'>
 							<DatePicker
 								selected={startDate}
 								onChange={(date) => setStartDate(date)}
@@ -172,7 +181,15 @@ const Location = () => {
 									<FamilyMemberCard
 										key={index}
 										id={index}
-										removeFamilyMember={(e) => setPCToShow(PCToShow - 1)}
+										onNameChange={(id, name) => {
+											handleNames(id, name);
+										}}
+										removeFamilyMember={(id) => {
+											const localNames = names;
+											localNames[id] = '';
+											setnames(localNames);
+											setPCToShow(PCToShow - 1);
+										}}
 									/>
 								</>
 							);
@@ -190,7 +207,14 @@ const Location = () => {
 					</div>
 					<div className=' text-center md:text-right py-4'>
 						<button
-							onClick={(e) => alert('Payment Successfull!')}
+							onClick={(e) => {
+								console.log();
+								PCToShow == 0
+									? alert('Start Adding some humans')
+									: names.some((name) => name.length !== 0)
+									? setshowModal(true)
+									: alert('Add valid names');
+							}}
 							className={` px-8 py-4 rounded-full tracking-wide text-xl font-semibold ${
 								PCToShow != 0
 									? 'bg-blue-500 text-white'
@@ -199,6 +223,18 @@ const Location = () => {
 							Confirm booking
 						</button>
 					</div>
+					<AnimatePresence>
+						{showModal && (
+							<Modal
+								closeModal={(e) => setshowModal(false)}
+								data={CurrentCity}
+								number={PCToShow}
+								price={normalPrice}
+								date={startDate}
+								names={names}
+							/>
+						)}
+					</AnimatePresence>
 				</div>
 			)}
 		</div>

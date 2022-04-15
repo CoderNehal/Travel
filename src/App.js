@@ -10,6 +10,7 @@ import Gallery from './components/Gallery';
 import Location from './components/Location';
 import NotFound from './components/NotFound';
 import ContactUs from './components/ContactUs/Index';
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 

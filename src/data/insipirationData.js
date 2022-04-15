@@ -27,7 +27,7 @@ export const inspirationData = [
         img: img2,
         tags: ["Manali", "Cold", "Kullu"],
         city: "Manali",
-        price: [1000, 2000],
+        price: [6000, 12000],
         discount: 30
     }, {
         id: 3,
@@ -48,7 +48,7 @@ export const inspirationData = [
         img: img3,
         tags: ["Pinkcity", "Banna"],
         city: "Jaipur",
-        price: [1000, 2000],
+        price: [4500, 9000],
         discount: 30
     },
     {
@@ -59,7 +59,7 @@ export const inspirationData = [
         img: img5,
         tags: ["DisneyLand", "Fun"],
         city: "Disneyland",
-        price: [1000, 2000],
+        price: [20000, 40000],
         discount: 30
     },
     {
@@ -70,7 +70,7 @@ export const inspirationData = [
         img: dubai,
         tags: ["TwinTowers", "Rich"],
         city: "Dubai",
-        price: [1000, 2000],
+        price: [35000, 70000],
         discount: 30
     },
     {
@@ -81,7 +81,7 @@ export const inspirationData = [
         img: paris,
         tags: ["paris", "tower"],
         city: "Paris",
-        price: [1000, 2000],
+        price: [150000, 300000],
         discount: 30
     },
     {
@@ -92,7 +92,7 @@ export const inspirationData = [
         img: tokyo,
         tags: ["Sakura", "Peace"],
         city: "Japan",
-        price: [1000, 2000],
+        price: [130000, 260000],
         discount: 30
     },
     {
@@ -103,7 +103,7 @@ export const inspirationData = [
         img: turkey,
         tags: ["historic", "waterrfalls"],
         city: "Turkey",
-        price: [1000, 2000],
+        price: [90000, 180000],
         discount: 30
     },
 ]

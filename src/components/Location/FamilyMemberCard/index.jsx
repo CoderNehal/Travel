@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const FamilyMemberCard = ({ removeFamilyMember, id }) => {
+const FamilyMemberCard = ({ removeFamilyMember, id, onNameChange }) => {
 	const handleDeleteFamily = (e) => {
 		document.getElementById(id).remove();
-		removeFamilyMember();
+		removeFamilyMember(id);
+	};
+	const [name, setname] = useState('');
+	const handleOnChange = (e) => {
+		let val = e.target.value;
+		onNameChange(id, val);
+		setname(val);
 	};
 	return (
 		<div id={`${id}`}>
-			<div className='member   flex flex-col md:flex-row md:h-28 '>
+			<div className='member    flex flex-col md:flex-row md:h-28 '>
 				<div className='member-info   w-full  xl:w-11/12 '>
 					<div className='flex flex-col py-2'>
 						<span className='opacity-60'>Name :</span> {'  '}
 						<input
-							className='h-1/2  w-full border-b-2 focus:border-green-500 focus:outline-none outline-none text-center md:text-left '
+							className='h-1/2  w-full border-b-2 bg-slate-50 focus:border-green-500 focus:outline-none outline-none text-center md:text-left '
 							type='text'
+							value={name}
+							onChange={(e) => handleOnChange(e)}
 							placeholder='Enter Name here.....'
 						/>
 					</div>
@@ -21,7 +29,7 @@ const FamilyMemberCard = ({ removeFamilyMember, id }) => {
 						<div className=''>
 							<span className='opacity-60'>Age</span> : {'  '}
 							<input
-								className='h-full border-b-2 focus:border-green-500 focus:outline-none outline-none text-center  w-full  md:w-40'
+								className='h-full border-b-2 bg-slate-50 focus:border-green-500 focus:outline-none outline-none text-center  w-full  md:w-40'
 								type='number'
 								placeholder='Enter age here'
 							/>
@@ -29,7 +37,7 @@ const FamilyMemberCard = ({ removeFamilyMember, id }) => {
 						<div className='pt-3 md:pt-0 md:pl-5'>
 							<span className='opacity-60 '>Mobile </span> : {'  '}
 							<input
-								className='h-full  border-b-2 focus:border-green-500 focus:outline-none outline-none text-center   w-full  md:w-40'
+								className='h-full  border-b-2 bg-slate-50 focus:border-green-500 focus:outline-none outline-none text-center   w-full  md:w-40'
 								type='tel'
 								placeholder='Enter Contact '
 							/>

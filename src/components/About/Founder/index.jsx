@@ -1,7 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import React, { useContext, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import founder from '../../../assets/images/founder.jpg';
+import founder from '../../../assets/images/founder2.jpg';
 import { Travelcontext } from '../../../utils/Context/ContextAPI';
 
 import '../../../assets/css/Founder/Founder.scss';
@@ -46,7 +46,7 @@ const Founder = () => {
 			
 			className=' min-h-screen   bg-black  text-white px-8 lg:px-32 pt-16 lg:py-20'>
 			<p className='text-3xl'>Founder</p>
-			<div className='main-container   py-16 lg:my-20 pb-12 flex flex-col lg:flex-row  justify-evenly relative'>
+			<div className='main-container  py-16 pt-8  md:pt-16 lg:my-20 pb-12 flex flex-col lg:flex-row  justify-evenly relative'>
 				<motion.img
 				ref={ref}
 					initial={{ opacity: 0 }}
@@ -70,14 +70,14 @@ const Founder = () => {
 						<motion.h1
 							initial={initialStage}
 							animate={startAnimation ? FounderNameAnimation : {}}
-							className=' text-4xl pb-4 btn-shine '>
+							className=' text-4xl pb-8  '>
 							Nehal Ughade
 						</motion.h1>
 					</div>
 					<motion.p
 						initial={initialStage}
 						animate={startAnimation ? FounderInfoAnimation : {}}
-						className=' pb-6 lg:pb-8 text-lg text-gray-300'>
+						className=' pb-6 lg:pb-6 text-lg text-gray-300'>
 						Nehal Ugahde is the co-founder and Chief Executive Officer of
 						Travlet's and sets the vision and strategy for the company. In 2017,
 						Nehal and Lokesh Patil became Travlet's first Hosts. Since then,

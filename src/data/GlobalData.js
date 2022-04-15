@@ -22,7 +22,7 @@ export const data = [
     {
         id: 3,
         img: img3,
-        title: "Tokyo",
+        title: "Japan",
         description: "Japan is the most amazing tourist destination and it offers many unique experiences that you cannot find in any other part of the world. The culture of this country is an interesting blend of Eastern traditions and Western modernity that can be seen everywhere.",
         ShortDescription: "Japan is the most amazing tourist destination and it offers many unique experiences that you cannot find in any other part of the world"
     }
