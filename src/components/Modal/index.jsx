@@ -11,6 +11,7 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 	const [details, setdetails] = useState(false);
 	const [email, setemail] = useState('');
 	const sendMail = (e) => {
+		e.preventDefault();
 		const finalNames = names.filter((name) => name.length !== 0);
 		const members = finalNames.map((name) => '<br />' + name).join(',');
 
@@ -31,14 +32,9 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 				},
 				process.env.REACT_APP_USER_ID
 			)
-			.then(
-				(result) => {
-					setsuccess(true);
-				},
-				(error) => {
-					
-				}
-			);
+			.then((result) => {
+				setsuccess(true);
+			});
 	};
 
 	return (
@@ -104,7 +100,7 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 										</a>
 									</div>
 									<div className=' w-full h-auto py-4 px-0 md:p-4  pt-0 md:border'>
-										<form>
+										<form onSubmit={(e) => sendMail(e)}>
 											<div className='mb-4 px-3 text-lg py-1 bg-white rounded-sm border-b-2 border-gray-300 focus-within:text-gray-900 focus-within:border-gray-500'>
 												<label
 													htmlFor='cc-name'
@@ -147,6 +143,8 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 													id='cc-number'
 													type='number'
 													name='cc-number'
+													minLength={16}
+													maxLength={16}
 													className='w-full h-8 focus:outline-none'
 													placeholder='16-digit card number'
 													required
@@ -163,6 +161,7 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 														id='cc-expiry'
 														type='text'
 														maxLength={5}
+														minLength={3}
 														onChange={(e) => {
 															if (e.currentTarget.value.length == 2) {
 																e.target.value = e.target.value.concat('/');
@@ -184,13 +183,13 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 														type='password'
 														className='w-full h-8 focus:outline-none'
 														maxLength={3}
+														minLength={3}
+														required
 													/>
 												</div>
 											</div>
 											<button
-												onClick={(e) => {
-													sendMail();
-												}}
+												type='submit'
 												className='h-12  rounded-full text-lg w-full  bg-indigo-600 tracking-wide  text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600'>
 												Confirm Payment
 											</button>
