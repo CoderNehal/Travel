@@ -18,7 +18,7 @@ const Header = () => {
 				animate='visible'
 				variants={container}
 				className='titles -mt-20 flex flex-col justify-center leading-tight md:leading-normal '>
-				<div className='hero-title text-pink-700  uppercase  flex flex-col items-center'>
+				<div className='hero-title text-violet-600  uppercase  flex flex-col items-center'>
 					<motion.p
 						initial={{ y: '60%', opacity: 0 }}
 						animate={{
@@ -26,7 +26,7 @@ const Header = () => {
 							opacity: 1,
 							transition: { ease: 'easeInOut', duration: 1 },
 						}}
-						className='md:-mb-8 drop-shadow-lg border-yellow-200 md:border-b-2   shadow-black text-7xl md:text-8xl text-center lg:text-left '>
+						className='md:-mb-8 drop-shadow-xl  md:border-b-2   shadow-black text-7xl md:text-8xl text-center lg:text-left '>
 						Where the
 					</motion.p>
 
@@ -37,7 +37,7 @@ const Header = () => {
 							opacity: 1,
 							transition: { ease: 'easeInOut', duration: 1, delay: 0.5 },
 						}}
-						className='drop-shadow-lg border-yellow-200 md:border-b-2 md:pt-10   shadow-black text-7xl md:text-8xl text-center mb-5 lg:mv-0'>
+						className='drop-shadow-xl  md:border-b-2 md:pt-10   shadow-black text-7xl md:text-8xl text-center mb-5 lg:mv-0'>
 						journey begins
 					</motion.p>
 				</div>
