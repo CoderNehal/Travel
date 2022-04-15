@@ -4,7 +4,6 @@ import dateFormat from 'dateformat';
 import emailjs from 'emailjs-com';
 import cancel from '../../assets/images/cancel.png';
 import '../../assets/css/Modal/Modal.scss';
-import parse from 'html-react-parser';
 
 const Modal = ({ closeModal, data, number, price, date, names }) => {
 	const localDate = new Date(date);
@@ -12,11 +11,9 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 	const [details, setdetails] = useState(false);
 	const [email, setemail] = useState('');
 	const sendMail = (e) => {
-		
-
 		const finalNames = names.filter((name) => name.length !== 0);
 		const members = finalNames.map((name) => '<br />' + name).join(',');
-	
+
 		emailjs
 			.send(
 				'service_hrxizej',
@@ -36,10 +33,10 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 			)
 			.then(
 				(result) => {
-					console.log(result.text);
+					setsuccess(true);
 				},
 				(error) => {
-					console.log(error.text);
+					
 				}
 			);
 	};
@@ -192,7 +189,6 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 											</div>
 											<button
 												onClick={(e) => {
-													setsuccess(true);
 													sendMail();
 												}}
 												className='h-12  rounded-full text-lg w-full  bg-indigo-600 tracking-wide  text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600'>

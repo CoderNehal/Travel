@@ -32,7 +32,6 @@ const ContactUs = () => {
 			.catch((err) => {
 				setshowModal(true);
 				seterror(err);
-				console.log(err);
 			});
 	};
 	return (

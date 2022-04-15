@@ -31,21 +31,21 @@ const Location = () => {
 		setCurrentCity(...currentCityData);
 		setnormalPrice(currentCityData[0].price[0]);
 		setpremiumPrice(currentCityData[0].price[1]);
-		// console.log(currentCityData[0].price[0]);
+	
 		window.scrollTo(0, 0);
 	}, []);
 
 	useEffect(() => {
 		if (inView) {
 			setflag(false);
-			console.log('Ok');
+			
 		}
 	}, [inView]);
 	const handleNames = (id, name) => {
 		const localNames = names;
 		localNames[id] = name;
 		setnames(localNames);
-		console.log(names);
+	
 	};
 	return (
 		<div className='mt-16 bg-slate-50   px-4 xl:px-20 py-8 xl:py-12 text-xl '>
@@ -208,7 +208,7 @@ const Location = () => {
 					<div className=' text-center md:text-right py-4'>
 						<button
 							onClick={(e) => {
-								console.log();
+							
 								PCToShow == 0
 									? alert('Start Adding some humans')
 									: names.some((name) => name.length !== 0)

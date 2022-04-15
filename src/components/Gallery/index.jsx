@@ -16,7 +16,7 @@ const Gallery = () => {
 	useEffect(() => {
 		if (inView) {
 			setflag(false);
-			console.log(inView);
+		
 		}
 	}, [inView]);
 
