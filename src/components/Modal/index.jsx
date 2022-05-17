@@ -119,6 +119,7 @@ const Modal = ({ closeModal, data, number, price, date, names }) => {
 												/>
 											</div>
 											
+											
 											<div className='mb-4 px-3 text-lg py-1 bg-white rounded-sm border-b-2 border-gray-300 focus-within:text-gray-900 focus-within:border-gray-500'>
 												<label
 													htmlFor='cc-name'
